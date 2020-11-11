@@ -30,7 +30,7 @@ locals {
 resource "aws_db_instance" "default" {
   count                 = var.enabled ? 1 : 0
   identifier            = var.database_name
-  name                  = var.database_name
+  # name                  = var.database_name
   username              = var.database_user
   password              = var.database_password
   port                  = var.database_port
